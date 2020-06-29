@@ -1,2 +1,7 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>Welcome <%= @user.name%>!</h1>
+
+<div>
+  <%= link_to 'All my Attendances', attendances_path %><br>
+  <%= link_to 'All my External Attendances', attendances_path %><br>
+  <%= link_to 'All Groups', groups_path %>
+</div>

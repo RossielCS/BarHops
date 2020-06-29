@@ -20,9 +20,13 @@ class AttendancesController < ApplicationController
 
   def show; end
 
+  def external_attendances
+    @attendances = Attendance.all
+  end
+
   private
 
   def attendance_params
-    require(:attendance).permit(:name, :amount)
+    params.require(:attendance).permit(:name, :amount)
   end
 end
