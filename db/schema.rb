@@ -13,13 +13,13 @@
 ActiveRecord::Schema.define(version: 2020_06_29_162840) do
 
   create_table "attendances", force: :cascade do |t|
-    t.integer "author_id_id"
+    t.integer "author_id"
     t.integer "group_id"
     t.string "name"
     t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id_id"], name: "index_attendances_on_author_id_id"
+    t.index ["author_id"], name: "index_attendances_on_author_id"
     t.index ["group_id"], name: "index_attendances_on_group_id"
   end
 
