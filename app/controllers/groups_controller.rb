@@ -1,10 +1,11 @@
 class GroupsController < ApplicationController
+  include GroupsHelper
   def new
     @group = Group.new
   end
 
   def create
-    @group = Group.new(group_params)
+    @group = current_user.groups.new(group_params)
     if @group.save
       flash[:notice] = 'Group created successfully.'
     else
@@ -14,16 +15,16 @@ class GroupsController < ApplicationController
   end
 
   def index
-    @groups = Group.all
+    @groups = group_alphabetical_order
   end
 
   def show
-    @group = Group.where(id: group_params[:id])
+    @group = Group.where(id: params[:id]).first
   end
 
   private
 
   def group_params
-    params.require(:group).permit(:id, :name)
+    params.require(:group).permit(:user_id, :name)
   end
 end

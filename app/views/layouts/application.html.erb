@@ -17,7 +17,9 @@
     <%= yield %>
 
     <% if logged_in? %>
-      <%= link_to 'Log Out', logout_path, method: :delete%>
+      <br>
+      <%= link_to 'Log Out', logout_path, method: :delete%><br>
+      <%= link_to 'User Menu', current_user %>
     <% end %>
 
   </body>

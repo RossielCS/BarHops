@@ -4,11 +4,13 @@
   <% @groups.each do |g| %>
       <div>
           Name:
-          <%= g.name %>
-          Author:
-          <%= g.author_id %>
+          <%= link_to "#{g.name}", group_path(@group, :id => g.id) %>
+          Icon:
+          <%= g.icon %>
           Created At:
           <%= g.created_at.strftime("%Y/%m/%d") %>
       </div>
     <% end %>
 </div>
+
+<%= link_to 'Create a new Group', new_group_path %><br>
