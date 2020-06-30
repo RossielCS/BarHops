@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get    'signup'  => 'users#new'
 
   resources :attendances, only: [:new, :create, :index, :show]
+
+  get 'external_attendances', to: 'attendances#external_attendances', as:'external_attendances'
   resources :groups, only: [:new, :create, :index, :show] 
 
   root 'sessions#new'

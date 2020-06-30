@@ -1,9 +1,6 @@
 <h1>All my Attendances</h1>
 
-<% @attendances.each do |item| %>
-  <%= item.name %>
-  <%= item.amount %><br>
-<% end %>
+<%= render 'attendances' %>
 
 <%= link_to 'Add new Attendance', new_attendance_path %><br>
 

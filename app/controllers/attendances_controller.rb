@@ -1,4 +1,5 @@
 class AttendancesController < ApplicationController
+  include AttendancesHelper
   def new
     @attendance = Attendance.new
   end
@@ -15,13 +16,13 @@ class AttendancesController < ApplicationController
   end
 
   def index
-    @attendances = Attendance.all
+    @attendances = attn_with_group
   end
 
   def show; end
 
   def external_attendances
-    @attendances = Attendance.all
+    @attendances = attn_without_group
   end
 
   private
