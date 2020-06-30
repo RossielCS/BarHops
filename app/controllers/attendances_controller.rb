@@ -4,8 +4,8 @@ class AttendancesController < ApplicationController
   end
 
   def create
-    @attendance = Attendance.new(attendance_params)
-    @attendance.author_id = current_user.id
+    @attendance = current_user.attendances.new(attendance_params)
+
     if @attendance.save
       flash[:notice] = 'Attendance created successfully.'
     else
@@ -27,6 +27,6 @@ class AttendancesController < ApplicationController
   private
 
   def attendance_params
-    params.require(:attendance).permit(:name, :amount)
+    params.require(:attendance).permit(:name, :amount, :group_id)
   end
 end

@@ -1,2 +1,9 @@
-<h1>Attendances#index</h1>
-<p>Find me in app/views/attendances/index.html.erb</p>
+<h1>All my Attendances</h1>
+
+<% @attendances.each do |item| %>
+  <%= item.name %>
+  <%= item.amount %><br>
+<% end %>
+
+<%= link_to 'Add new Attendance', new_attendance_path %><br>
+

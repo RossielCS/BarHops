@@ -1,2 +1,16 @@
 <h1>Attendances#new</h1>
-<p>Find me in app/views/attendances/new.html.erb</p>
+
+<%= form_for(@attendance) do |form| %>
+  <%= form.label :name %><br>
+  <%= form.text_field :name, placeholder: 'Attendance\'s Name' %><br><br>
+
+  <%= form.label :amount %><br>
+  <%= form.select :amount, (1..10) %><br><br>
+
+  <% groups = Group.all %>
+  <%= form.label :group %><br>
+  <%= form.select :group_id, groups.map{|g| [g.name, g.id] }, include_blank: 'No Group' %><br>  
+
+  <%= form.submit 'Save' %>
+<% end %>
+<br>
