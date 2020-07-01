@@ -1,5 +1,9 @@
 <h1>Welcome <%= @user.name%>!</h1>
 
+<div class="avatar">
+  <%= user_avatar(@user) %>
+</div>
+
 <div>
   <%= link_to 'All my Attendances', attendances_path %><br>
   <%= link_to 'All my External Attendances', external_attendances_path %><br>

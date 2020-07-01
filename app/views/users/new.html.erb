@@ -2,11 +2,14 @@
 
 <br><br>
 <div>
-  <div>
+  <div>    
     <div>
       <%= form_for @user do |f| %>
         <%= f.label :name %><br>
         <%= f.text_field :name %><br><br>
+        
+        <%= f.label :image %><br>
+        <%= f.file_field :user_avatar %><br><br>
 
         <%= f.submit 'Sign Up' %>
       <% end %>

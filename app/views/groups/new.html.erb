@@ -2,7 +2,10 @@
 
 <%= form_for(@group) do |form| %>
   <%= form.label :name %><br>
-  <%= form.text_field :name, placeholder: 'Group\'s Name' %><br><br>
+  <%= form.text_field :name, placeholder: 'Group\'s Name' %><br>
+
+  <%= form.label :image %><br>
+  <%= form.file_field :group_avatar %><br><br>
 
   <%= form.submit 'Save' %>
 <% end %>

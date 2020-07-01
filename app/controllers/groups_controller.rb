@@ -6,6 +6,8 @@ class GroupsController < ApplicationController
 
   def create
     @group = current_user.groups.new(group_params)
+    @group.group_avatar.attach(group_params[:group_avatar])
+
     if @group.save
       flash[:notice] = 'Group created successfully.'
     else
@@ -25,6 +27,6 @@ class GroupsController < ApplicationController
   private
 
   def group_params
-    params.require(:group).permit(:user_id, :name)
+    params.require(:group).permit(:user_id, :name, :group_avatar)
   end
 end

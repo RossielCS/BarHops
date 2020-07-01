@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.user_avatar.attach(user_params[:user_avatar])
 
     if @user.save
       log_in(@user)
@@ -23,6 +24,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name)
+    params.require(:user).permit(:name, :user_avatar)
   end
 end
