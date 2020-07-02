@@ -1,5 +1,5 @@
 <% @attendances.each do |item| %>
   <%= item.name %>
   <%= item.amount %>
-  <%= item.group %><br>
+  <%= attn_group(item.group_id) %><br>
 <% end %>

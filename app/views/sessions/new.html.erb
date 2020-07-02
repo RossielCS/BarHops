@@ -1,21 +1,30 @@
-<h1>Log In</h1>
-
-<br><br>
-<div>
-  <div>
-    <div>
-      <%= form_for(:session, url: login_path) do |f| %>
-        
-        <%= f.label :name %><br>
-        <%= f.text_field :name %><br><br>
-        
-        <%= f.submit 'Log In' %>
-      <% end %>
+<div class="container-fluid p-0">
+  <header>
+    <div class="container text-center m-auto">
+      <div class="row justify-content-center header-text align-items-center">
+        <div class="col-1 p-0">
+          <%= link_to image_tag("arrow_left.png") %>
+        </div>
+        <div class="col-9">
+          <h1 class="m-0 title">LOGIN</h1>
+        </div>
+        <div class="col-2 text-nowrap p-0">
+          <input type="submit" value="Log In" form="login">
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </header>
 
-<div>
-  <p>If you don't have an account you can register here</p>
-  <%= link_to 'Sign Up', signup_path %>
+  <div class="container mt-3">
+    <div class="row justify-content-center">
+      <div class="col-12 p-0">
+        <%= form_for(:session, url: login_path, html: {id: "login"}) do |f| %>                 
+          <%= f.text_field :name, placeholder: 'Name' %><br><br>         
+        <% end %>
+
+        <p>If you don't have an account you can register here</p>
+        <%= link_to 'Sign Up', signup_path %>
+      </div>
+    </div>
+  </div> 
 </div>

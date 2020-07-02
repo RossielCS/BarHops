@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Proxima-Nova-Bold";
+  src: url("proxima_nova_bold.otf");  
+}
+
+@font-face {
+  font-family: "Proxima-Nova-Regular";
+  src: url("proxima_nova_regular.otf");
+}
+
+@font-face {
+  font-family: "Proxima-Nova-Thin";
+  src: url("proxima_nova_thin.otf");
+}
+
+$primary-color: #3778c2;
+$primary-color-dark: #2d619d;
+$secondary-color: #5fb523;
+$bg-color: #f5f6f8;
+$text-color-dark: #434b54;
+$text-color-one: #555e67;
+$text-color-two: #86898e;
+$text-color-three: #989da3;
+$text-color-light: #fff;
+
+body {
+  background-color: $bg-color;
+  font-family: "Proxima-Nova-Thin";
+}
+header {
+  background-image: linear-gradient($primary-color, $primary-color-dark);
+}
+.header-text {
+  color: $text-color-light;  
+}
+
+.title {
+  font-size: 30px;
+  font-family: "Proxima-Nova-Regular";
+}
+
+input[type=submit] {
+  font-size: 24px;
+  border: none;
+  background-color: transparent;
+  color: $text-color-light;
+  &:hover {
+    background-color: $primary-color-dark;
+  }
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: $text-color-light;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  border-color: #f0f0f2;
+  color: #f0f0f2;
+}
