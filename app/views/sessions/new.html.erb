@@ -1,16 +1,14 @@
 <div class="container-fluid p-0">
-  <header>
+  <header class="title bg-header">
     <div class="container text-center m-auto">
       <div class="row justify-content-center header-text align-items-center">
         <div class="col-1 p-0">
           <%= link_to image_tag("arrow_left.png") %>
         </div>
         <div class="col-9">
-          <h1 class="m-0 title">LOGIN</h1>
+          <h1 class="m-0">LOGIN</h1>
         </div>
-        <div class="col-2 text-nowrap p-0">
-          <input type="submit" value="Log In" form="login">
-        </div>
+        <input type="submit" value="Log In" form="login" class="col-2 text-nowrap">
       </div>
     </div>
   </header>
@@ -20,10 +18,7 @@
       <div class="col-12 p-0">
         <%= form_for(:session, url: login_path, html: {id: "login"}) do |f| %>                 
           <%= f.text_field :name, placeholder: 'Name' %><br><br>         
-        <% end %>
-
-        <p>If you don't have an account you can register here</p>
-        <%= link_to 'Sign Up', signup_path %>
+        <% end %>        
       </div>
     </div>
   </div> 

@@ -1,11 +1,38 @@
-<h1>Welcome <%= @user.name%>!</h1>
-
-<div class="avatar">
-  <%= user_avatar(@user) %>
+<div class="container-fluid p-0">
+  <div class="container m-auto header-text title profile-bg">
+    
+    <header class="text-center">
+      <div class="row">
+        <%= render partial: 'sessions/logout_link' %>
+      </div> 
+      <br>
+      <%= user_avatar(@user) %>
+      <h1><%= @user.name%></h1>
+    </header>
+    <br>
+    <body class="row">
+      <ul class="col-9 p-0 m-auto header-text d-flex flex-column justify-content-center">
+        <li id="all_attn">
+          <div class="menu-border">
+            <%= link_to 'All my Attendances', attendances_path, class: 'header-text' %><br> 
+          </div> 
+        </li>         
+        <li id="all_ext_attn">
+          <div class="menu-border">
+            <%= link_to 'All my External Attendances', external_attendances_path, class: 'header-text text-nowrap' %><br>
+          </div>
+        </li>        
+        <li id="all_groups">
+          <%= link_to 'All Groups', groups_path, class: 'header-text' %>
+        </li>        
+      </ul>      
+    </body>
+  </div>
+  
 </div>
 
-<div>
-  <%= link_to 'All my Attendances', attendances_path %><br>
-  <%= link_to 'All my External Attendances', external_attendances_path %><br>
-  <%= link_to 'All Groups', groups_path %>
-</div>
+
+
+
+
+

@@ -23,20 +23,38 @@ $text-color-two: #86898e;
 $text-color-three: #989da3;
 $text-color-light: #fff;
 
+@mixin link(){
+  line-height: 60px;
+  background-repeat: no-repeat;
+  background-position: 0 .5em;
+  padding-left: 1.8em;
+}
+
 body {
   background-color: $bg-color;
   font-family: "Proxima-Nova-Thin";
 }
-header {
-  background-image: linear-gradient($primary-color, $primary-color-dark);
+
+.container {
+  max-width: 1000px;
 }
+
 .header-text {
   color: $text-color-light;  
 }
 
-.title {
-  font-size: 30px;
-  font-family: "Proxima-Nova-Regular";
+.bg-header {
+  background-image: linear-gradient($primary-color, $primary-color-dark);
+}
+
+.title {  
+  font-size: 26px;
+  font-family: "Proxima-Nova-Thin";
+}
+
+.profile-bg {
+  height: 100vh;
+  background-image: linear-gradient(#143560, #3084c2);
 }
 
 input[type=submit] {
@@ -44,8 +62,12 @@ input[type=submit] {
   border: none;
   background-color: transparent;
   color: $text-color-light;
+  height: inherit;
   &:hover {
-    background-color: $primary-color-dark;
+    background-color: $primary-color-dark;    
+  }
+  &:focus {
+    outline: none;
   }
 }
 
@@ -56,6 +78,45 @@ input[type=text] {
   border-style: solid;
   border-width: 1px;
   border-radius: 2px;
-  border-color: #f0f0f2;
-  color: #f0f0f2;
+  border-color: #e4e4e4;
+  &:focus {
+    outline: solid 1px #d3d3d3;
+  }
+}
+
+.avatar {
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.menu-border {
+  border-bottom: solid 1px $text-color-light;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $text-color-light;
+}
+
+#all_attn {
+  @include link();
+  background-image: url('all_attendances.png');
+}
+
+#all_ext_attn {
+  @include link();
+  background-image: url('all_ext_attendances.png');
+}
+
+#all_groups {
+  @include link();
+  background-image: url('all_groups.png');
 }
