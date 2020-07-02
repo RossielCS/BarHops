@@ -1,3 +1,28 @@
-<h1>All my External Attendances</h1>
+<div class="container-fluid p-0">
+  <div class="container m-auto header-text title bg-header">
+    <header class="text-center">
+      <div class="row justify-content-center header-text align-items-center">
+        <div class="col-2 p-0">
+          <%= link_to image_tag("arrow_left.png"), user_path(current_user.id)%>
+        </div>
+        <div class="col-7">
+          <h1 class="m-0">EXTERNAL ATTENDANCES</h1>
+        </div>
+        <div class="col-3">
+          <%= render partial: 'sessions/logout_link'%>
+        </div>
+      </div>
+    </header>
+  </div>
 
-<%= render 'attendances' %>
+  <div class="container">
+    <div class="row">
+      <%= render 'attendances' %>
+    </div>
+    <div class="row">
+      <div class="col add_new_button p-3">
+        <%= link_to 'ADD NEW ATTENDANCE', new_attendance_path, class: 'py-2 header-text text-center' %><br>
+      </div>
+    </div>       
+  </div>
+</div>

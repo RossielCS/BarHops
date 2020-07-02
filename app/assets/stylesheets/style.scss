@@ -23,6 +23,16 @@ $text-color-two: #86898e;
 $text-color-three: #989da3;
 $text-color-light: #fff;
 
+@mixin input {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: $text-color-light;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  border-color: #e7e7e7;
+}
+
 @mixin link(){
   line-height: 60px;
   background-repeat: no-repeat;
@@ -62,26 +72,20 @@ input[type=submit] {
   border: none;
   background-color: transparent;
   color: $text-color-light;
-  height: inherit;
-  &:hover {
-    background-color: $primary-color-dark;    
-  }
   &:focus {
     outline: none;
   }
 }
 
 input[type=text] {
-  width: 100%;
-  padding: 12px 20px;
-  background-color: $text-color-light;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 2px;
-  border-color: #e4e4e4;
+  @include input();
   &:focus {
     outline: solid 1px #d3d3d3;
   }
+}
+
+input[type=file] {
+  @include input();  
 }
 
 .avatar {
@@ -119,4 +123,18 @@ a:hover {
 #all_groups {
   @include link();
   background-image: url('all_groups.png');
+}
+
+.add_new_button {
+  background-color: $secondary-color;
+  &:hover {
+    background-color: #71d629;
+  }
+  a {
+    display: inline-block;
+    width: 100%;
+    border: solid 1px $text-color-light;
+    font-family: "Proxima-Nova-Regular";
+    font-size: 28;
+  }
 }

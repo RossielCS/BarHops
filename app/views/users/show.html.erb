@@ -3,7 +3,7 @@
     
     <header class="text-center">
       <div class="row">
-        <%= render partial: 'sessions/logout_link' %>
+        <%= render partial: 'sessions/logout_link', class: 'col-3 offset-9 text-nowrap' %>
       </div> 
       <br>
       <%= user_avatar(@user) %>
@@ -21,7 +21,7 @@
           <div class="menu-border">
             <%= link_to 'All my External Attendances', external_attendances_path, class: 'header-text text-nowrap' %><br>
           </div>
-        </li>        
+        </li>
         <li id="all_groups">
           <%= link_to 'All Groups', groups_path, class: 'header-text' %>
         </li>        

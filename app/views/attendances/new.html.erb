@@ -1,16 +1,32 @@
-<h1>Attendances#new</h1>
+<div class="container-fluid p-0">
+  <header class="title bg-header">
+    <div class="container text-center m-auto">
+      <div class="row justify-content-center header-text align-items-center">
+        <div class="col-1 p-0">
+          <%= link_to image_tag("arrow_left.png") %>
+        </div>
+        <div class="col-9">
+          <h1 class="m-0">Add New Attendance</h1>
+        </div>
+        <input type="submit" value="Save" form="new_attn_form" class="col-2 text-nowrap">
+      </div>
+    </div>
+  </header>
 
-<%= form_for(@attendance) do |form| %>
-  <%= form.label :name %><br>
-  <%= form.text_field :name, placeholder: 'Attendance\'s Name' %><br><br>
+  <div class="container mt-3">
+    <div class="row justify-content-center">
+      <div class="col-12 p-0">
+        <%= form_for(@attendance, html: {id: 'new_attn_form'}) do |form| %>
+          <%= form.text_field :name, placeholder: 'Attendance\'s Name', class: 'shadow-sm' %><br><br>
 
-  <%= form.label :amount %><br>
-  <%= form.select :amount, (1..10) %><br><br>
+          <%= form.label :amount %><br>
+          <%= form.select :amount, (1..10) %><br><br>
 
-  <% groups = Group.all %>
-  <%= form.label :group %><br>
-  <%= form.select :group_id, groups.map{|g| [g.name, g.id] }, include_blank: 'No Group' %><br>  
-
-  <%= form.submit 'Save' %>
-<% end %>
-<br>
+          <% groups = Group.all %>
+          <%= form.label :group %><br>
+          <%= form.select :group_id, groups.map{|g| [g.name, g.id] }, include_blank: 'No Group' %><br>
+        <% end %>
+      </div>
+    </div>
+  </div> 
+</div>
