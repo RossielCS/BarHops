@@ -17,6 +17,6 @@ module GroupsHelper
 
   def group_has_attn(group)
     attn = Attendance.includes(:group).where(group_id: group.id).order(created_at: :desc)
-    attn    
+    attn
   end
 end

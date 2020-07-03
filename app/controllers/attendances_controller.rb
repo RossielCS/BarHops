@@ -7,24 +7,24 @@ class AttendancesController < ApplicationController
   def create
     @attendance = current_user.attendances.new(attendance_params)
 
+    # rubocop:disable Style/ConditionalAssignment
     if @attendance.save
       flash[:notice] = 'Attendance created successfully.'
     else
       flash[:notice] = 'Attendance couldn\'t be created.'
     end
     redirect_to current_user
+    # rubocop:enable Style/ConditionalAssignment
   end
 
   def index
     @attendances = attn_with_group
-    @total = 0
   end
 
   def show; end
 
   def external_attendances
     @attendances = attn_without_group
-    @total = 0
   end
 
   private

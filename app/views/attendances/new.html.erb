@@ -3,7 +3,7 @@
     <div class="container text-center m-auto">
       <div class="row justify-content-center header-text align-items-center">
         <div class="col-1 p-0">
-          <%= link_to image_tag("arrow_left.png") %>
+          <%= link_to image_tag("arrow_left.png"), attendances_path %>
         </div>
         <div class="col-9">
           <h1 class="m-0 title">NEW ATTENDANCE</h1>
@@ -20,13 +20,13 @@
           <%= form.text_field :name, placeholder: 'Attendance\'s Name', class: 'shadow-sm' %><br><br>
 
           <div class="px-3">
-            <%= form.label :quantity%><br>
+            <%= form.label :select_quantity %><br>
             <%= form.select :amount, (1..10) %><br><br>
           </div>
 
           <% groups = Group.all %>
           <div class="px-3">
-            <%= form.label :group %><br>
+            <%= form.label :select_group %><br>
             <%= form.select :group_id, groups.map{|g| [g.name, g.id] }, include_blank: 'No Group' %><br>
           </div>          
         <% end %>

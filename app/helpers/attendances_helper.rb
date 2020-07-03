@@ -8,12 +8,13 @@ module AttendancesHelper
   end
 
   def attn_group(group_id)
-    image = Group.where(id: group_id).first.group_avatar
-    image_tag image.variant(resize: '100x100'), class: 'group-avatar border'
+    image = Group.where(id: group_id).first
+    image_tag image.group_avatar, class: 'group-avatar border' if image.group_avatar.attached?
   end
 
-  def total_attn(total, attn)    
-    total += attn.amount
+  def total_attn(attendances)
+    total = 0
+    attendances.each { |a| total += a.amount }
     total
   end
 end

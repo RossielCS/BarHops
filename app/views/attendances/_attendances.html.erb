@@ -1,13 +1,13 @@
-<% @attendances.each do |item| %>
-  <section class="row px-2 pt-3 mx-3 d-flex justify-content-between">
+<section class="row px-2 pt-3 mx-3 d-flex justify-content-between">
     <div>
       Total:
     </div>
-    <div>      
-      <%= total_attn(@total, item) %>
+    <div>
+      <%= total_attn(@attendances) %> 
     </div>
   </section>
 
+<% @attendances.each do |item| %>
   <article class="row mx-2 py-3 m-0 border-art">
     <div class="col-3">
       <% if item.group %>
@@ -28,7 +28,8 @@
     </div>  
   </article>
 <% end %>
-
+<div class="row black-space">
+</div>
 <div class="row">
   <%= link_to 'ADD NEW ATTENDANCE', new_attendance_path, class: 'd-block col add_new_button p-3 fixed-bottom header-text text-center' %>
 </div> 
