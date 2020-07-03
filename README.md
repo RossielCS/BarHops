@@ -33,11 +33,15 @@ Here is the user journey for the app:
   * It's not in the given design, but you should make an effort to follow the same style of the other pages.
 
 ## Screenshot
-![screenshot]()
+![screenshot](./app/assets/images/screenshot_00.png)
+![screenshot](./app/assets/images/screenshot_01.png)
+![screenshot](./app/assets/images/screenshot_02.png)
+![screenshot](./app/assets/images/screenshot_03.png)
+![screenshot](./app/assets/images/screenshot_04.png)
 
 ## Live Demo
 
-You can try it [here]().
+You can try it [here](https://frozen-shelf-35515.herokuapp.com/).
 
 ## :hammer:  Built With
 - Ruby 2.7,
