@@ -1,0 +1,40 @@
+<div class="container-fluid p-0">
+  <div class="container m-auto header-text title bg-header">
+    <header class="text-center">
+      <div class="row justify-content-center header-text align-items-center">
+        <div class="col-2 p-0">
+          <%= link_to image_tag("arrow_left.png"), groups_path %>
+        </div>
+        <div class="col-7">
+          <h1 class="m-0 title">GROUP</h1>
+        </div>
+        <div class="col-3">
+          <%= render partial: 'sessions/logout_link'%>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <section class="container p-0">
+    <h2 class="text-center mt-3"><%= @group.name %></h2>
+    <h3 class="mt-3 pl-4">ATTENDANCES:</h3>
+    <% group_has_attn(@group).each do |a| %>
+      <article class="row px-3 py-2 border-art">
+        <div class="col px-4 d-flex flex-column justify-content-between">
+          Name:
+          <%= a.name %>
+          <div>
+            Author Name:
+            <%= group_user_name(a.author_id)%>
+          </div>
+          <div>
+            Created at:
+            <%= a.created_at.strftime("%Y/%m/%d") %>
+          </div>
+        </div>
+      </article> 
+    <% end %>      
+  </section>
+</div>
+
+ 
