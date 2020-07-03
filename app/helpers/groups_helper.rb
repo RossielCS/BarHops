@@ -9,9 +9,14 @@ module GroupsHelper
 
   def group_avatar(group)
     if group.group_avatar.attached?
-      image_tag group.group_avatar.variant(resize: '100x100')
+      image_tag group.group_avatar, class: 'group-avatar d-block border'
     else
-      image_tag 'default_group_avatar.png', size: '100x100'
+      image_tag 'default_group_avatar.png', class: 'group-avatar d-block border'
     end
+  end
+
+  def group_attn(group)
+    attn = Attendance.includes(:group).where(id: group.id).order(created_at: :desc)
+    attn    
   end
 end

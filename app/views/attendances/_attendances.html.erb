@@ -1,7 +1,30 @@
 <% @attendances.each do |item| %>
-  <%= item.name %>
-  <%= item.amount %>
-  <% if item.group %>
-    <%= attn_group(item.group_id) %><br>
-  <% end %>  
+  <section class="row px-2 pt-3 mx-3 d-flex justify-content-between">
+    <div>
+      Total:
+    </div>
+    <div>      
+      <%= total_attn(@total, item) %>
+    </div>
+  </section>
+
+  <article class="row mx-2 py-3 m-0 border-art">
+    <div class="col-3">
+      <% if item.group %>
+        <%= attn_group(item.group_id) %><br>
+      <% end %>
+    </div>
+    <div class="col-7 pl-2 pr-2 d-flex flex-column justify-content-between">  
+      Name:
+      <%= item.name %><br>
+      <div>
+        Created at:
+        <%= item.created_at.strftime("%Y/%m/%d") %>
+      </div>
+    </div>
+    <div class="col-2 pl-1 text-right"> 
+      Qty:
+      <%= item.amount %>
+    </div>  
+  </article>
 <% end %>

@@ -17,12 +17,14 @@ class AttendancesController < ApplicationController
 
   def index
     @attendances = attn_with_group
+    @total = 0
   end
 
   def show; end
 
   def external_attendances
     @attendances = attn_without_group
+    @total = 0
   end
 
   private

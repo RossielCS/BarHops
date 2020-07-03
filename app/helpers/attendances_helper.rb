@@ -9,6 +9,11 @@ module AttendancesHelper
 
   def attn_group(group_id)
     image = Group.where(id: group_id).first.group_avatar
-    image_tag image.variant(resize: '100x100')
+    image_tag image.variant(resize: '100x100'), class: 'group-avatar border'
+  end
+
+  def total_attn(total, attn)    
+    total += attn.amount
+    total
   end
 end

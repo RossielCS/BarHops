@@ -1,17 +1,18 @@
 <div class="container-fluid p-0">
   <div class="container m-auto header-text title profile-bg">
     
-    <header class="text-center">
-      <div class="row">
-        <%= render partial: 'sessions/logout_link', class: 'col-3 offset-9 text-nowrap' %>
-      </div> 
-      <br>
+    <header class="text-center mb-4">
+      <div class="row justify-content-end ">
+        <div class="col-3 mr-2">
+          <%= render partial: 'sessions/logout_link' %>
+        </div>        
+      </div>
       <%= user_avatar(@user) %>
       <h1><%= @user.name%></h1>
     </header>
-    <br>
+
     <body class="row">
-      <ul class="col-9 p-0 m-auto header-text d-flex flex-column justify-content-center">
+      <ul class="col-9 p-0 m-auto d-flex flex-column justify-content-center">
         <li id="all_attn">
           <div class="menu-border">
             <%= link_to 'All my Attendances', attendances_path, class: 'header-text' %><br> 

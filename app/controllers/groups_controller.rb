@@ -13,7 +13,7 @@ class GroupsController < ApplicationController
     else
       flash[:notice] = 'Group couldn\'t be created.'
     end
-    redirect_to @group
+    redirect_to groups_path
   end
 
   def index

@@ -34,10 +34,11 @@ $text-color-light: #fff;
 }
 
 @mixin link(){
+  font-size: 18px;
   line-height: 60px;
   background-repeat: no-repeat;
-  background-position: 0 .5em;
-  padding-left: 1.8em;
+  background-position: 0 .7em;
+  padding-left: 2.7em;
 }
 
 body {
@@ -58,8 +59,14 @@ body {
 }
 
 .title {  
-  font-size: 26px;
-  font-family: "Proxima-Nova-Thin";
+  height: 10vh;
+  line-height: 10vh;
+  font-size: 22px;
+  font-family: "Proxima-Nova-Regular";  
+}
+
+h3 {
+  font-size: 18px;
 }
 
 .profile-bg {
@@ -67,8 +74,12 @@ body {
   background-image: linear-gradient(#143560, #3084c2);
 }
 
+.logout {
+  font-size: 19px;
+}
+
 input[type=submit] {
-  font-size: 24px;
+  font-size: 15px;
   border: none;
   background-color: transparent;
   color: $text-color-light;
@@ -88,11 +99,24 @@ input[type=file] {
   @include input();  
 }
 
+article {
+  font-size: 14px;
+}
+
+.border-art {
+  border: solid 1px #989da341;
+}
+
 .avatar {
   object-fit: cover;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
+}
+
+.group-avatar {
+  width: 70px;
+  height: 70px;
 }
 
 .menu-border {
@@ -135,6 +159,6 @@ a:hover {
     width: 100%;
     border: solid 1px $text-color-light;
     font-family: "Proxima-Nova-Regular";
-    font-size: 28;
+    font-size: 17px;
   }
 }
