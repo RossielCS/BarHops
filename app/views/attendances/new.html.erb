@@ -6,7 +6,7 @@
           <%= link_to image_tag("arrow_left.png") %>
         </div>
         <div class="col-9">
-          <h1 class="m-0">Add New Attendance</h1>
+          <h1 class="m-0 title">NEW ATTENDANCE</h1>
         </div>
         <input type="submit" value="Save" form="new_attn_form" class="col-2 text-nowrap">
       </div>
@@ -19,12 +19,16 @@
         <%= form_for(@attendance, html: {id: 'new_attn_form'}) do |form| %>
           <%= form.text_field :name, placeholder: 'Attendance\'s Name', class: 'shadow-sm' %><br><br>
 
-          <%= form.label :amount %><br>
-          <%= form.select :amount, (1..10) %><br><br>
+          <div class="px-3">
+            <%= form.label :quantity%><br>
+            <%= form.select :amount, (1..10) %><br><br>
+          </div>
 
           <% groups = Group.all %>
-          <%= form.label :group %><br>
-          <%= form.select :group_id, groups.map{|g| [g.name, g.id] }, include_blank: 'No Group' %><br>
+          <div class="px-3">
+            <%= form.label :group %><br>
+            <%= form.select :group_id, groups.map{|g| [g.name, g.id] }, include_blank: 'No Group' %><br>
+          </div>          
         <% end %>
       </div>
     </div>

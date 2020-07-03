@@ -18,7 +18,7 @@
   <body class="container p-0">
     <h2 class="text-center mt-3"><%= @group.name %></h2>
     <h3 class="mt-3 pl-4">ATTENDANCES:</h3>
-    <% group_attn(@group).each do |a| %>
+    <% group_has_attn(@group).each do |a| %>
       <article class="row px-3 py-2 border-art">
         <div class="col px-4 d-flex flex-column justify-content-between">
           Name:

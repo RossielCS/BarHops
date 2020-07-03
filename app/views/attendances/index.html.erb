@@ -15,13 +15,7 @@
     </header>
   </div>
 
-  <div class="container p-0">
-    <%= render 'attendances' %>
-
-    <div class="row">
-      <div class="col add_new_button p-3 fixed-bottom">
-        <%= link_to 'ADD NEW ATTENDANCE', new_attendance_path, class: 'py-2 header-text text-center' %><br>
-      </div>
-    </div>       
-  </div>
+  <body class="container p-0">
+    <%= render 'attendances' %>          
+  </body>
 </div>

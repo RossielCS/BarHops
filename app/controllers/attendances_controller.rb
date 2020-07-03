@@ -12,7 +12,7 @@ class AttendancesController < ApplicationController
     else
       flash[:notice] = 'Attendance couldn\'t be created.'
     end
-    redirect_to attendances_path
+    redirect_to current_user
   end
 
   def index

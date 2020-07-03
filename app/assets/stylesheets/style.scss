@@ -169,14 +169,10 @@ a:hover {
 
 .add_new_button {
   background-color: $secondary-color;
+  width: 100%;
+  font-family: "Proxima-Nova-Regular";
+  font-size: 17px;
   &:hover {
     background-color: #71d629;
-  }
-  a {
-    display: inline-block;
-    width: 100%;
-    border: solid 1px $text-color-light;
-    font-family: "Proxima-Nova-Regular";
-    font-size: 17px;
-  }
+  }  
 }

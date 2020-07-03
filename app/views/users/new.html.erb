@@ -16,7 +16,7 @@
   <div class="container mt-3">
     <div class="row justify-content-center">
       <div class="col-12 p-0">
-        <%= form_for(@user, url: new_user_path, html: {id: 'register'}) do |f| %>
+        <%= form_for(@user, url: users_path, html: {id: 'register'}) do |f| %>
           <%= f.file_field :user_avatar, placeholder: 'Upload Picture' %><br><br>
 
           <%= f.text_field :name, placeholder: 'Name' %><br><br>

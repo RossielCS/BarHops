@@ -17,9 +17,9 @@
     <body>
       <% @groups.each do |g| %>
         <article class="row p-2 m-0 border-art">
-          <div class="col-3 p-0">
+          <span class="col-3 p-0">
             <%= group_avatar(g) %>
-          </div>
+          </span>
           <div class="col-9 d-flex flex-column justify-content-between">
             <p class="m-0">
               Name: <%= link_to "#{g.name}", group_path(@group, id: g.id) %>
@@ -31,13 +31,10 @@
           </div>  
         </article>
       <% end %>
-    </body>   
-      
-    <div class="row">
-      <div class="col add_new_button p-3 fixed-bottom">
-        <%= link_to 'CREATE A GROUP', new_group_path, class: 'py-1 header-text text-center' %><br>
+      <div class="row">
+        <%= link_to 'CREATE A GROUP', new_group_path, class: 'd-block col add_new_button fixed-bottom py-1 header-text text-center' %><br>
       </div>
-    </div>
+    </body>     
   </div>
 </div>
 
