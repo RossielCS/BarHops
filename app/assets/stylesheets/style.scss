@@ -49,6 +49,13 @@ body {
   max-width: 1000px;
 }
 
+.logo {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .login {  
   background-color: $primary-color;
   color: $text-color-light;
