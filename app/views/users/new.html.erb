@@ -1,0 +1,27 @@
+<div class="container-fluid p-0">
+  <header class="title bg-header">
+    <div class="container text-center m-auto">
+      <div class="row justify-content-center header-text align-items-center">
+        <div class="col-1 p-0">
+          <%= link_to image_tag("arrow_left.png"), root_path %>
+        </div>
+        <div class="col-9">
+          <h1 class="m-0 title">REGISTER</h1>
+        </div>
+        <input type="submit" value="Next" form="register" class="col-2 text-nowrap">
+      </div>
+    </div>
+  </header>
+
+  <section class="container mt-3">
+    <div class="row justify-content-center">
+      <div class="col-12 p-0">
+        <%= form_for(@user, url: users_path, html: {id: 'register'}) do |f| %>
+          <%= f.file_field :user_avatar, placeholder: 'Upload Picture' %><br><br>
+
+          <%= f.text_field :name, placeholder: 'Name' %><br><br>
+        <% end %>
+      </div>
+    </div>
+  </section> 
+</div>
