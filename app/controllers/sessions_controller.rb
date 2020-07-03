@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
   def new; end
 
+  def home; end
+
   def create
     user = User.find_by(name: params[:session][:name])
     if user

@@ -50,6 +50,24 @@ body {
   max-width: 1000px;
 }
 
+.login {  
+  background-color: $primary-color;
+  color: $text-color-light;
+  font-family: "Proxima-Nova-Regular";
+  &:active {
+    background-color: $primary-color-dark;
+  }
+}
+
+.signup {
+  color: $text-color-dark;
+  font-family: "Proxima-Nova-Regular";
+  &:active {
+    color: $text-color-light;
+    background-color: $text-color-three;
+  }
+}
+
 .header-text {
   color: $text-color-light;  
 }
