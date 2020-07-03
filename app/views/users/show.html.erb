@@ -3,7 +3,7 @@
     
     <header class="text-center mb-4">
       <div class="row justify-content-end ">
-        <div class="col-3 mr-2">
+        <div class="col-3">
           <%= render partial: 'sessions/logout_link' %>
         </div>        
       </div>
@@ -11,7 +11,7 @@
       <h1><%= @user.name%></h1>
     </header>
 
-    <body class="row">
+    <section class="row">
       <ul class="col-9 p-0 m-auto d-flex flex-column justify-content-center">
         <li id="all_attn">
           <div class="menu-border">
@@ -27,13 +27,6 @@
           <%= link_to 'All Groups', groups_path, class: 'header-text' %>
         </li>        
       </ul>      
-    </body>
-  </div>
-  
+    </section>
+  </div>  
 </div>
-
-
-
-
-
-
