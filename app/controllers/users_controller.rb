@@ -9,10 +9,10 @@ class UsersController < ApplicationController
 
     if @user.save
       log_in(@user)
-      flash[:notice] = 'User successfully created.'
+      flash[:success] = 'User successfully created.'
       redirect_to @user
     else
-      flash[:notice] = 'There was an error while creating the user.'
+      flash[:danger] = 'There was an error while creating the user.'
       redirect_to new_user_path
     end
   end
