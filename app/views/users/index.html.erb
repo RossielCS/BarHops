@@ -6,7 +6,7 @@
           <%= link_to image_tag("arrow_left.png"), user_path(current_user.id)%>
         </div>
         <div class="col-7">
-          <h1 class="m-0 title">GROUPS</h1>
+          <h1 class="m-0 title">USERS</h1>
         </div>
         <div class="col-3">
           <%= render partial: 'sessions/logout_link'%>
@@ -14,27 +14,26 @@
       </div>
     </header>
     <section>
-      <% @groups.each do |g| %>
+      <% Attendance.friends_name(current_user, @users).each do |user| %>
         <article class="row p-2 m-0 border-art">
-          <span class="col-3 p-0">
-            <%= group_avatar(g) %>
-          </span>
-          <div class="col-9 d-flex flex-column justify-content-between">
+          <div class="col-5 p-0">
+            <%= user_avatar(user.author_id) %>
+          </div>
+          <div class="col-7 d-flex flex-column justify-content-between">
             <p class="m-0">
-              Name: <%= link_to "#{g.name}", group_path(@group, id: g.id), class: 'a-text' %>
+              Name: <%= user.name %>
             </p>
             <div>
-              Created At:
-              <%= g.created_at.strftime("%Y/%m/%d") %>
+              Groups in common:
+              <ul>
+                <% Group.attn_groups_by_user(Attendance.current_user_groups_id(user.author_id)).each do |g| %>
+                  <li ><%= g.name %></li>
+                <% end %>
+              </ul>
             </div>
           </div>  
         </article>
       <% end %>
-      <div class="row blank-space">
-      </div>
-      <div class="row">
-        <%= link_to 'CREATE A GROUP', new_group_path, class: 'd-block col add_new_button fixed-bottom py-1 header-text text-center a-text' %><br>
-      </div>
     </section>     
   </div>
 </div>

@@ -24,8 +24,13 @@
           </div>
         </li>
         <li id="all_groups">
-          <%= link_to 'All Groups', groups_path, class: 'header-text a-text' %>
-        </li>        
+          <div class="menu-border">
+            <%= link_to 'All Groups', groups_path, class: 'header-text a-text' %>
+          </div>  
+        </li>
+        <li id="all_users">
+          <%= link_to 'Bar Hopping Users', users_path, class: 'header-text a-text' %>
+        </li>  
       </ul>      
     </section>
   </div>  

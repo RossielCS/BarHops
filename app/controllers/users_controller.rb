@@ -21,6 +21,10 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
+  def index
+    @users = User.not_current_user_list(current_user)
+  end
+
   private
 
   def user_params
