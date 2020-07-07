@@ -9,10 +9,12 @@ class AttendancesController < ApplicationController
     # rubocop:disable Style/ConditionalAssignment
     if @attendance.save
       flash[:success] = 'Attendance created successfully.'
+      redirect_to current_user
     else
       flash[:danger] = 'Attendance couldn\'t be created.'
+      render 'new'
     end
-    redirect_to current_user
+    
     # rubocop:enable Style/ConditionalAssignment
   end
 

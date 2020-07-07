@@ -12,7 +12,7 @@ class GroupsController < ApplicationController
     if @group.save
       flash[:success] = 'Group created successfully.'
     else
-      flash[:danger] = 'Group couldn\'t be created.'
+      flash[:danger] = 'Group could not be created.'
     end
     redirect_to groups_path
     # rubocop:enable Style/ConditionalAssignment

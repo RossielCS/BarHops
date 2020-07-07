@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       flash[:success] = 'User successfully created.'
       redirect_to @user
     else
-      flash[:danger] = 'There was an error while creating the user.'
+      flash[:danger] = 'The user could not be created.'
       redirect_to new_user_path
     end
   end
