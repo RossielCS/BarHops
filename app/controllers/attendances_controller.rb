@@ -5,8 +5,6 @@ class AttendancesController < ApplicationController
 
   def create
     @attendance = current_user.attendances.new(attendance_params)
-
-    # rubocop:disable Style/ConditionalAssignment
     if @attendance.save
       flash[:success] = 'Attendance created successfully.'
       redirect_to current_user
@@ -14,8 +12,6 @@ class AttendancesController < ApplicationController
       flash[:danger] = 'Attendance couldn\'t be created.'
       render 'new'
     end
-    
-    # rubocop:enable Style/ConditionalAssignment
   end
 
   def index

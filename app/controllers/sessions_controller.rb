@@ -17,7 +17,6 @@ class SessionsController < ApplicationController
 
   def destroy
     log_out
-    # rubocop:disable Style/ConditionalAssignment
     if session[:user_id].nil?
       flash.now[:success] = 'You have successfully logged out.'
       render 'home'
@@ -25,7 +24,6 @@ class SessionsController < ApplicationController
       flash[:danger] = 'There was an error while loggin out.'
       session_redirect
     end
-    # rubocop:enable Style/ConditionalAssignment
   end
 
   private
