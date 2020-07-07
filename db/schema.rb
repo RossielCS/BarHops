@@ -12,11 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2020_06_30_233101) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
-    t.integer "record_id", null: false
-    t.integer "blob_id", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
@@ -34,8 +37,8 @@ ActiveRecord::Schema.define(version: 2020_06_30_233101) do
   end
 
   create_table "attendances", force: :cascade do |t|
-    t.integer "author_id"
-    t.integer "group_id"
+    t.bigint "author_id"
+    t.bigint "group_id"
     t.string "name"
     t.integer "amount"
     t.datetime "created_at", null: false
@@ -46,7 +49,7 @@ ActiveRecord::Schema.define(version: 2020_06_30_233101) do
   end
 
   create_table "groups", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -61,4 +64,5 @@ ActiveRecord::Schema.define(version: 2020_06_30_233101) do
     t.index ["name"], name: "index_users_on_name", unique: true
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
 end
