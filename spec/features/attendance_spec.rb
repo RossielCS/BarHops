@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe 'Attendances', type: :feature do
-  before :each do
-    User.create(name: 'Alex')
-    Group.create(name: 'My Test Group', user_id: 1)
+  subject(:user) { User.create(name: 'Alex') }
+  before :each do    
+    Group.create(name: 'My Test Group', user_id: user.id)
     visit login_path
     expect(page).to have_content('LOGIN')
-    fill_in 'session[name]', with: 'Alex'
+    fill_in 'session[name]', with: user.name
     click_on 'Log In'
     expect(page).to have_content('Alex')
     click_on 'All my Attendances'
@@ -42,7 +42,6 @@ RSpec.describe 'Attendances', type: :feature do
   it 'doesn\'t create an attendance without name' do
     fill_in 'attendance[name]', with: ''
     find(:select, 'attendance_amount').find(:option, '1').select_option
-    select('My Test Group', from: 'attendance_group_id').select_option
     click_on 'Save'
     expect(page).to have_content('Attendance couldn\'t be created.')
   end
@@ -51,7 +50,6 @@ RSpec.describe 'Attendances', type: :feature do
   it 'doesn\'t create an attendance with a name of more than 30 characters' do
     fill_in 'attendance[name]', with: long_name
     find(:select, 'attendance_amount').find(:option, '1').select_option
-    select('My Test Group', from: 'attendance_group_id').select_option
     click_on 'Save'
     expect(page).to have_content('Attendance couldn\'t be created.')
   end
