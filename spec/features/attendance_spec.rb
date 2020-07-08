@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Attendances', type: :feature do
   subject(:user) { User.create(name: 'Alex') }
-  before :each do    
+  before :each do
     Group.create(name: 'My Test Group', user_id: user.id)
     visit login_path
     expect(page).to have_content('LOGIN')
