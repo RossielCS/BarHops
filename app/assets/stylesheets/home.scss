@@ -1,0 +1,23 @@
+@import "variables";
+
+.logo-container {
+  padding-top: 50%;
+  padding-bottom: 20%;
+  img {
+    object-fit: cover;
+    max-width: 100%;
+  }
+}
+
+.signup {
+  color: $text-color-dark;
+  font-family: "Proxima-Nova-Regular";
+  &:active {
+    color: $text-color-light;
+    background-color: $text-color-three;
+  }
+  &:hover {
+    color: $text-color-dark;
+    text-decoration: none;
+  }
+}

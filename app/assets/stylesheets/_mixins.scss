@@ -1,0 +1,17 @@
+@mixin input {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: $text-color-light;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  border-color: #e7e7e7;
+}
+
+@mixin link(){
+  font-size: 18px;
+  line-height: 60px;
+  background-repeat: no-repeat;
+  background-position: 0 .7em;
+  padding-left: 2.7em;
+}

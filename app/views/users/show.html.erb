@@ -15,17 +15,22 @@
       <ul class="col-9 p-0 m-auto d-flex flex-column justify-content-center">
         <li id="all_attn">
           <div class="menu-border">
-            <%= link_to 'All my Attendances', attendances_path, class: 'header-text' %><br> 
+            <%= link_to 'All my Attendances', attendances_path, class: 'header-text a-text' %><br> 
           </div> 
         </li>         
         <li id="all_ext_attn">
           <div class="menu-border">
-            <%= link_to 'All my External Attendances', external_attendances_path, class: 'header-text text-nowrap' %><br>
+            <%= link_to 'All my External Attendances', external_attendances_path, class: 'header-text text-nowrap a-text' %><br>
           </div>
         </li>
         <li id="all_groups">
-          <%= link_to 'All Groups', groups_path, class: 'header-text' %>
-        </li>        
+          <div class="menu-border">
+            <%= link_to 'All Groups', groups_path, class: 'header-text a-text' %>
+          </div>  
+        </li>
+        <li id="all_users">
+          <%= link_to 'Bar Hopping Users', users_path, class: 'header-text a-text' %>
+        </li>  
       </ul>      
     </section>
   </div>  

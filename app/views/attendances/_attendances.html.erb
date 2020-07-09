@@ -10,9 +10,7 @@
 <% @attendances.each do |item| %>
   <article class="row mx-2 py-3 m-0 border-art">
     <div class="col-3">
-      <% if item.group %>
-        <%= attn_group(item.group_id) %><br>
-      <% end %>
+      <%= attn_group(item.group_id) %><br>
     </div>
     <div class="col-7 pl-2 pr-2 d-flex flex-column justify-content-between">  
       Name:
@@ -28,8 +26,8 @@
     </div>  
   </article>
 <% end %>
-<div class="row black-space">
+<div class="row blank-space">
 </div>
 <div class="row">
-  <%= link_to 'ADD NEW ATTENDANCE', new_attendance_path, class: 'd-block col add_new_button p-3 fixed-bottom header-text text-center' %>
+  <%= link_to 'ADD NEW ATTENDANCE', new_attendance_path, class: 'd-block col add_new_button py-4 fixed-bottom header-text text-center a-text' %>
 </div> 

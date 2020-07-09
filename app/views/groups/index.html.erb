@@ -21,7 +21,7 @@
           </span>
           <div class="col-9 d-flex flex-column justify-content-between">
             <p class="m-0">
-              Name: <%= link_to "#{g.name}", group_path(@group, id: g.id) %>
+              Name: <%= link_to "#{g.name}", group_path(@group, id: g.id), class: 'a-text' %>
             </p>
             <div>
               Created At:
@@ -30,13 +30,11 @@
           </div>  
         </article>
       <% end %>
-      <div class="row black-space">
+      <div class="row blank-space">
       </div>
       <div class="row">
-        <%= link_to 'CREATE A GROUP', new_group_path, class: 'd-block col add_new_button fixed-bottom py-1 header-text text-center' %><br>
+        <%= link_to 'CREATE A GROUP', new_group_path, class: 'd-block col add_new_button fixed-bottom py-1 header-text text-center a-text' %><br>
       </div>
     </section>     
   </div>
 </div>
-
-

@@ -1,45 +1,11 @@
-@font-face {
-  font-family: "Proxima-Nova-Bold";
-  src: url("proxima_nova_bold.otf");  
-}
+@import "attendances";
+@import "groups";
+@import "home";
+@import "sessions";
+@import "users";
 
-@font-face {
-  font-family: "Proxima-Nova-Regular";
-  src: url("proxima_nova_regular.otf");
-}
-
-@font-face {
-  font-family: "Proxima-Nova-Thin";
-  src: url("proxima_nova_thin.otf");
-}
-
-$primary-color: #3778c2;
-$primary-color-dark: #2d619d;
-$secondary-color: #5fb523;
-$bg-color: #f5f6f8;
-$text-color-dark: #434b54;
-$text-color-one: #555e67;
-$text-color-two: #86898e;
-$text-color-three: #989da3;
-$text-color-light: #fff;
-
-@mixin input {
-  width: 100%;
-  padding: 12px 20px;
-  background-color: $text-color-light;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 2px;
-  border-color: #e7e7e7;
-}
-
-@mixin link(){
-  font-size: 18px;
-  line-height: 60px;
-  background-repeat: no-repeat;
-  background-position: 0 .7em;
-  padding-left: 2.7em;
-}
+@import "variables";
+@import "mixins";
 
 body {
   background-color: $bg-color;
@@ -49,29 +15,8 @@ body {
   max-width: 1000px;
 }
 
-.logo {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.login {  
-  background-color: $primary-color;
-  color: $text-color-light;
-  font-family: "Proxima-Nova-Regular";
-  &:active {
-    background-color: $primary-color-dark;
-  }
-}
-
-.signup {
-  color: $text-color-dark;
-  font-family: "Proxima-Nova-Regular";
-  &:active {
-    color: $text-color-light;
-    background-color: $text-color-three;
-  }
+.alert {
+  width: 100%;
 }
 
 .header-text {
@@ -87,19 +32,6 @@ body {
   line-height: 10vh;
   font-size: 22px;
   font-family: "Proxima-Nova-Regular";  
-}
-
-h3 {
-  font-size: 18px;
-}
-
-.profile-bg {
-  height: 100vh;
-  background-image: linear-gradient(#143560, #3084c2);
-}
-
-.logout {
-  font-size: 19px;
 }
 
 input[type=submit] {
@@ -131,54 +63,19 @@ article {
   border: solid 1px #989da341;
 }
 
-.avatar {
-  object-fit: cover;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-}
-
-.group-avatar {
-  width: 70px;
-  height: 70px;
-}
-
-.menu-border {
-  border-bottom: solid 1px $text-color-light;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-a:hover {
+.a-text:hover {
   text-decoration: none;
   color: $text-color-light;
 }
 
-#all_attn {
-  @include link();
-  background-image: url('all_attendances.png');
-}
-
-#all_ext_attn {
-  @include link();
-  background-image: url('all_ext_attendances.png');
-}
-
-#all_groups {
-  @include link();
-  background-image: url('all_groups.png');
-}
-
-.black-space {
+.blank-space {
   height: 20vh;
+  width: 100vw;
 }
 
 .add_new_button {
   background-color: $secondary-color;
+  height: 10%;
   width: 100%;
   font-family: "Proxima-Nova-Regular";
   font-size: 17px;
