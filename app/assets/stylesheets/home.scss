@@ -1,10 +1,12 @@
 @import "variables";
 
-.logo {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.logo-container {
+  padding-top: 50%;
+  padding-bottom: 20%;
+  img {
+    object-fit: cover;
+    max-width: 100%;
+  }
 }
 
 .signup {

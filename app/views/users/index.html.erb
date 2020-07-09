@@ -19,18 +19,19 @@
           <div class="col-5 p-0">
             <%= user_avatar(user.author_id) %>
           </div>
-          <div class="col-7 d-flex flex-column justify-content-between">
-            <p class="m-0">
-              Name: <%= user.name %>
+          <div class="col-7 pl-1 pr-0 d-flex flex-column justify-content-between">
+            <p>
+              <strong>Name: </strong> 
+              <%= user.name %>
             </p>
-            <div>
-              Groups in common:
-              <ul>
+            <ol class="p-0 m-0">
+              <strong>Groups in common:</strong> <br>
+              <div class="pl-4">
                 <% Group.attn_groups_by_user(Attendance.current_user_groups_id(user.author_id)).each do |g| %>
-                  <li ><%= g.name %></li>
+                  <li class=""> <%= g.name %> </li>
                 <% end %>
-              </ul>
-            </div>
+              </div>
+            </ol>
           </div>  
         </article>
       <% end %>

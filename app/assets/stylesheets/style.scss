@@ -15,6 +15,10 @@ body {
   max-width: 1000px;
 }
 
+.alert {
+  width: 100%;
+}
+
 .header-text {
   color: $text-color-light;  
 }
@@ -71,6 +75,7 @@ article {
 
 .add_new_button {
   background-color: $secondary-color;
+  height: 10%;
   width: 100%;
   font-family: "Proxima-Nova-Regular";
   font-size: 17px;
