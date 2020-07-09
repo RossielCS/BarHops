@@ -16,28 +16,29 @@ Here is the user journey for the app:
   * A list of all transactions created by the logged-in user is displayed (sorted by most recent).
   * Each transaction displays its name, amount and date, and an icon of the group it belongs to.
   * An action button "Add new" is displayed.
-4. When the user opens "All my external transactions" page (see the *Transactions list page* screenshot above):
-  * A list of all transactions that are created by a logged-in user but **not assigned to any group** (sorted by most recent).
-  * The design of the page is similar to the "All my transactions".
+4. When the user opens "All my external transactions" page:
+  * A list of all transactions that are created by a logged-in user but not assigned to any group (sorted by most recent).
 5. When the user opens "All groups" page:
-  * A list of all groups is displayed (example ideas for names: "Kitchen renovation", "Books, music & culture", "Car maintenance") in alphabetical order.
+  * A list of all groups is displayed in alphabetical order.
   * Each group displays its icon, name, and creation date.
   * Each group is clickable and opens the "Group transactions" page.
   * An action button "Create new" is displayed.
-  * The design of the page is similar to the "User profile page"
 6. When the user opens the "Group transactions" page:
   * A list of all transactions that belong to that group is displayed.
-  * The design of the page is similar to the "All my transactions". Besides the information that appears in All my transactions page, each transaction displays the **name of the author** of the transaction.
+  * Each transaction displays the name of the author of the transaction.
 7. When the user opens "Create new group" or "Add new transaction" page:
   * A form with all necessary fields is displayed.
-  * It's not in the given design, but you should make an effort to follow the same style of the other pages.
 
 ## Screenshot
-![screenshot]()
+<img src="./app/assets/images/screenshot_00.png" alt="screenshot" width="250"/>
+<img src="./app/assets/images/screenshot_01.png" alt="screenshot" width="250"/>
+<img src="./app/assets/images/screenshot_02.png" alt="screenshot" width="250"/>
+<img src="./app/assets/images/screenshot_03.png" alt="screenshot" width="250"/>
+<img src="./app/assets/images/screenshot_04.png" alt="screenshot" width="250"/>
 
 ## Live Demo
 
-You can try it [here]().
+You can try it [here](https://frozen-shelf-35515.herokuapp.com/).
 
 ## :hammer:  Built With
 - Ruby 2.7,

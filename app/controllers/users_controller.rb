@@ -9,16 +9,20 @@ class UsersController < ApplicationController
 
     if @user.save
       log_in(@user)
-      flash[:notice] = 'User successfully created.'
+      flash[:success] = 'User successfully created.'
       redirect_to @user
     else
-      flash[:notice] = 'There was an error while creating the user.'
+      flash[:danger] = 'The user could not be created.'
       redirect_to new_user_path
     end
   end
 
   def show
     @user = current_user
+  end
+
+  def index
+    @users = User.not_current_user_list(current_user)
   end
 
   private

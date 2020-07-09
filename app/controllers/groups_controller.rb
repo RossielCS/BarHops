@@ -7,19 +7,16 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.new(group_params)
     @group.group_avatar.attach(group_params[:group_avatar])
-
-    # rubocop:disable Style/ConditionalAssignment
     if @group.save
-      flash[:notice] = 'Group created successfully.'
+      flash[:success] = 'Group created successfully.'
     else
-      flash[:notice] = 'Group couldn\'t be created.'
+      flash[:danger] = 'Group could not be created.'
     end
     redirect_to groups_path
-    # rubocop:enable Style/ConditionalAssignment
   end
 
   def index
-    @groups = group_alphabetical_order
+    @groups = Group.group_alphabetical_order
   end
 
   def show

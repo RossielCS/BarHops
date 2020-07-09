@@ -1,15 +1,15 @@
 module AttendancesHelper
-  def attn_with_group
-    Attendance.includes(:group).where.not(group: nil).where(author: current_user.id).order(created_at: :desc)
-  end
-
-  def attn_without_group
-    Attendance.includes(:group).where(group: nil, author: current_user.id).order(created_at: :desc)
-  end
-
   def attn_group(group_id)
-    image = Group.where(id: group_id).first
-    image_tag image.group_avatar, class: 'group-avatar border' if image.group_avatar.attached?
+    # rubocop:disable Style/GuardClause
+    if group_id
+      image = Group.where(id: group_id).first
+      if image.group_avatar.attached?
+        image_tag image.group_avatar, class: 'group-avatar border'
+      else
+        image_tag 'default_group_avatar.png', class: 'group-avatar d-block border'
+      end
+    end
+    # rubocop:enable Style/GuardClause
   end
 
   def total_attn(attendances)
