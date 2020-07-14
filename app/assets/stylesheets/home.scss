@@ -1,15 +1,42 @@
 @import "variables";
 
 .logo-container {
-  padding-top: 50%;
-  padding-bottom: 20%;
-  img {
-    object-fit: cover;
-    max-width: 100%;
+  grid-row: 2/3;
+  padding-bottom: 5vmin;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  img {    
+    max-width: 80vmin;
   }
 }
 
-.signup {
+.login-signup {
+  grid-row: 3/4;
+  margin-top: 5vmax;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  font-family: "Proxima-Nova-Regular";
+  a {
+    height: 7vmax;
+    width: 100%;
+    line-height: 7vmax;
+    text-align: center;
+  }
+  .login {
+    color: $text-color-light;
+    background-color: $primary-color;
+    &:hover {
+      background-color: $primary-color-dark;
+    }
+  }
+  .signup {
+    color: $text-color-dark;
+  }
+}
+
+/*.signup {
   color: $text-color-dark;
   font-family: "Proxima-Nova-Regular";
   &:active {
@@ -20,4 +47,4 @@
     color: $text-color-dark;
     text-decoration: none;
   }
-}
+}*/
