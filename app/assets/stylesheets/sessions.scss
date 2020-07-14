@@ -8,7 +8,7 @@
   height: 10vmax;
   padding: 0 5vmin;
   @include d-flex(row, space-between, center);
-  background-color: $primary-color;
+  background-image: linear-gradient($primary-color, $primary-color-dark);
   color: $text-color-light;
   font-family: "Proxima-Nova-Regular";
   font-size: 7vmin;
@@ -17,8 +17,7 @@
       height: 6vmin;
       vertical-align: middle;
     }
-  }
-    
+  }    
   div {
     padding-left: 8vmin;
   }  
@@ -26,10 +25,12 @@
 
 .login-form {
   input[type=text] {
-    @include input();    
+    @include input();
+    &:focus {
+      outline: solid 1px #d3d3d3;
+    }
   }
   input[type=file] {
-    @include input();
-    color: $text-color-three;    
+    @include input();   
   }
 }

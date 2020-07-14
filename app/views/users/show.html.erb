@@ -1,37 +1,34 @@
-<div class="container-fluid p-0">
-  <div class="container m-auto header-text title profile-bg">
-    
-    <header class="text-center mb-4">
-      <div class="row justify-content-end ">
-        <div class="col-3">
-          <%= render partial: 'sessions/logout_link' %>
-        </div>        
-      </div>
-      <%= user_avatar(@user) %>
-      <h1><%= @user.name%></h1>
-    </header>
+<div class="container profile-bg">    
+  <header>
+    <div>
+      <div>
+        <%= render partial: 'sessions/logout_link' %>
+      </div>        
+    </div>
+    <%= user_avatar(@user) %>
+    <h1><%= @user.name%></h1>
+  </header>
 
-    <section class="row">
-      <ul class="col-9 p-0 m-auto d-flex flex-column justify-content-center">
-        <li id="all_attn">
-          <div class="menu-border">
-            <%= link_to 'All my Attendances', attendances_path, class: 'header-text a-text' %><br> 
-          </div> 
-        </li>         
-        <li id="all_ext_attn">
-          <div class="menu-border">
-            <%= link_to 'All my External Attendances', external_attendances_path, class: 'header-text text-nowrap a-text' %><br>
-          </div>
-        </li>
-        <li id="all_groups">
-          <div class="menu-border">
-            <%= link_to 'All Groups', groups_path, class: 'header-text a-text' %>
-          </div>  
-        </li>
-        <li id="all_users">
-          <%= link_to 'Bar Hopping Users', users_path, class: 'header-text a-text' %>
-        </li>  
-      </ul>      
-    </section>
-  </div>  
+  <section class="">
+    <ul class="">
+      <li id="all_attn">
+        <div class="menu-border">
+          <%= link_to 'All my Attendances', attendances_path, class: '' %><br> 
+        </div> 
+      </li>         
+      <li id="all_ext_attn">
+        <div class="menu-border">
+          <%= link_to 'All my External Attendances', external_attendances_path, class: '' %><br>
+        </div>
+      </li>
+      <li id="all_groups">
+        <div class="menu-border">
+          <%= link_to 'All Groups', groups_path, class: '' %>
+        </div>  
+      </li>
+      <li id="all_users">
+        <%= link_to 'Bar Hopping Users', users_path, class: '' %>
+      </li>  
+    </ul>      
+  </section> 
 </div>

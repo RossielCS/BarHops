@@ -15,12 +15,13 @@
   border-radius: 2px;
   border-color: #e7e7e7;
   font-size: 5vmin;
+  color: $text-color-three;
 }
 
-/*@mixin link(){
-  font-size: 18px;
-  line-height: 60px;
+@mixin link(){
+  font-size: 5vmin;
+  line-height: 8vmin;
   background-repeat: no-repeat;
   background-position: 0 .7em;
   padding-left: 2.7em;
-}*/
+}
