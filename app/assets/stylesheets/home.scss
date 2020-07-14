@@ -1,11 +1,10 @@
 @import "variables";
+@import "mixins";
 
 .logo-container {
   grid-row: 2/3;
   padding-bottom: 5vmin;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  @include d-flex(row, center, flex-start);
   img {    
     max-width: 80vmin;
   }
@@ -13,11 +12,11 @@
 
 .login-signup {
   grid-row: 3/4;
-  margin-top: 5vmax;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
+  margin: 5vmax 0;
+  padding: 0 5vmax;
+  @include d-flex(column, end, center);
   font-family: "Proxima-Nova-Regular";
+  font-size: 5vmin;
   a {
     height: 7vmax;
     width: 100%;
@@ -35,16 +34,3 @@
     color: $text-color-dark;
   }
 }
-
-/*.signup {
-  color: $text-color-dark;
-  font-family: "Proxima-Nova-Regular";
-  &:active {
-    color: $text-color-light;
-    background-color: $text-color-three;
-  }
-  &:hover {
-    color: $text-color-dark;
-    text-decoration: none;
-  }
-}*/

@@ -2,16 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "variables";
+@import "mixins";
 
-/*.login {  
+.header {
+  height: 10vmax;
+  padding: 0 5vmin;
+  @include d-flex(row, space-between, center);
   background-color: $primary-color;
   color: $text-color-light;
   font-family: "Proxima-Nova-Regular";
-  &:active {
-    background-color: $primary-color-dark;
+  font-size: 7vmin;
+  a {
+    img {
+      height: 6vmin;
+      vertical-align: middle;
+    }
   }
+    
+  div {
+    padding-left: 8vmin;
+  }  
 }
 
-.logout {
-  font-size: 19px;
-}*/
+.login-form {
+  input[type=text] {
+    @include input();    
+  }
+  input[type=file] {
+    @include input();
+    color: $text-color-three;    
+  }
+}

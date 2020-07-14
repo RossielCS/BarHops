@@ -5,8 +5,8 @@
 /*@import "attendances";
 @import "groups";*/
 @import "home";
-/*@import "sessions";
-@import "users";*/
+@import "sessions";
+/*@import "users";*/
 
 body {
   background-color: $bg-color;
@@ -15,13 +15,31 @@ body {
 .container {
   max-width: 100vw;
   height: 100vh;
-  padding: 5vmax;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
 }
 
+.container-reg-log {
+  grid-row: 1/2;
+}
+
+
 a {
   text-decoration: none;
+}
+
+input[type=submit] {
+  border: none;
+  background-color: transparent;
+  color: $text-color-light;
+  font-size: 5vmin;
+  font-family: "Proxima-Nova-Regular";
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 /*.alert {
