@@ -1,40 +1,39 @@
-<div class="container-fluid p-0">
-  <div class="container m-auto header-text title profile-bg overflow-auto">
-    <header class="text-center mb-3">
-      <div class="row justify-content-center header-text align-items-center">
-        <div class="col-2 p-0">
-          <%= link_to image_tag("arrow_left.png"), user_path(current_user.id)%>
+<div class="container profile-bg">
+  <div class="attn-container">
+    <div>
+      <header class="header">
+        <%= link_to image_tag("arrow_left.png"), user_path(current_user.id)%>
+        
+        <div>
+          <h1>GROUPS</h1>
         </div>
-        <div class="col-7">
-          <h1 class="m-0 title">GROUPS</h1>
-        </div>
-        <div class="col-3">
-          <%= render partial: 'sessions/logout_link'%>
-        </div>
-      </div>
-    </header>
-    <section>
-      <% @groups.each do |g| %>
-        <article class="row p-2 m-0 border-art">
-          <span class="col-3 p-0">
-            <%= group_avatar(g) %>
-          </span>
-          <div class="col-9 d-flex flex-column justify-content-between">
-            <p class="m-0">
-              Name: <%= link_to "#{g.name}", group_path(@group, id: g.id), class: 'a-text' %>
-            </p>
-            <div>
-              Created At:
-              <%= g.created_at.strftime("%Y/%m/%d") %>
-            </div>
-          </div>  
-        </article>
-      <% end %>
-      <div class="row blank-space">
-      </div>
-      <div class="row">
-        <%= link_to 'CREATE A GROUP', new_group_path, class: 'd-block col add_new_button fixed-bottom py-1 header-text text-center a-text' %><br>
-      </div>
+
+        <%= render partial: 'sessions/logout_link'%>      
+      </header>
+    </div>    
+
+    <section class="attn-render">
+      <div class="attn-list-section">
+        <% @groups.each do |g| %>
+          <article class="art-group border-art">
+            <span class="art-image">
+              <%= group_avatar(g) %>
+            </span>
+
+            <div class="attn-description group-description">
+              <div>
+                Name: <%= link_to "#{g.name}", group_path(@group, id: g.id) %>
+              </div>
+              <div>
+                Created At:
+                <%= g.created_at.strftime("%Y/%m/%d") %>
+              </div>
+            </div>  
+          </article>
+        <% end %>
+      </div>      
+      
+      <%= link_to 'CREATE A GROUP', new_group_path, class: 'add-new-button' %>
     </section>     
   </div>
 </div>

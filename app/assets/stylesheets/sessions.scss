@@ -7,8 +7,7 @@
 .header {
   height: 10vmax;
   padding: 0 5vmin;
-  @include d-flex(row, space-between, center);
-  background-image: linear-gradient($primary-color, $primary-color-dark);
+  @include d-flex(row, space-between, center);  
   color: $text-color-light;
   font-family: "Proxima-Nova-Regular";
   font-size: 7vmin;
@@ -17,11 +16,6 @@
       height: 6vmin;
       vertical-align: middle;
     }
-  }
-  &:last-child a {
-    font-size: 5vmin;
-    font-family: "Proxima-Nova-Regular";
-    color: $text-color-light;
   }
 }
 

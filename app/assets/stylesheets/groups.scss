@@ -1,12 +1,15 @@
 // Place all the styles related to the groups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-/*h3 {
-  font-size: 18px;
-}*/
+@import "variables";
 
 .group-avatar {
   height: 20vmin;
   width: 20vmin;
+}
+
+.logout {
+  font-size: 5vmin;
+  font-family: "Proxima-Nova-Regular";
+  color: $text-color-light;
 }
