@@ -13,7 +13,7 @@
 .login-signup {
   grid-row: 3/4;
   margin: 5vmax 0;
-  padding: 0 5vmax;
+  padding: 0 5vmin;
   @include d-flex(column, end, center);
   font-family: "Proxima-Nova-Regular";
   font-size: 5vmin;

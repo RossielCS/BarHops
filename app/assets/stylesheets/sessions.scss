@@ -17,10 +17,12 @@
       height: 6vmin;
       vertical-align: middle;
     }
-  }    
-  div {
-    padding-left: 8vmin;
-  }  
+  }
+  &:last-child a {
+    font-size: 5vmin;
+    font-family: "Proxima-Nova-Regular";
+    color: $text-color-light;
+  }
 }
 
 .login-form {

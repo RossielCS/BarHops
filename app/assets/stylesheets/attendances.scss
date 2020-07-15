@@ -1,0 +1,37 @@
+@import "variables";
+@import "mixins";
+
+.attn-container {
+  grid-row-start: 1;
+  
+  font-family: "Proxima-Nova-Regular";
+  .attn-render {
+    height: 90vmax;
+    @include d-flex(column, space-between, center);
+    .attn-list-section {
+      width: 100%;
+      padding: 0 5vmin;
+      section {
+        height: 12vmin;
+        padding: 0 3vmin;
+        font-size: 5vmin;
+        @include d-flex(row, space-between, center);
+      }
+      article {
+        padding: 3vmin;
+        font-size: 4vmin;
+        @include d-flex(row, space-between, start);
+        .art-image {
+          @include d-flex(column, center, center);
+        }
+        .attn-description {
+          height: 20vmin;
+          @include d-flex(column, start, start);
+          & > div {
+            margin-bottom: 4vmin;
+          }
+        }
+      }
+    }
+  }
+}

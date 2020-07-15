@@ -6,7 +6,7 @@
 @import "groups";*/
 @import "home";
 @import "sessions";
-/*@import "users";*/
+@import "users";
 
 body {
   background-color: $bg-color;
@@ -22,7 +22,6 @@ body {
 .container-reg-log {
   grid-row: 1/2;
 }
-
 
 a {
   text-decoration: none;
@@ -40,6 +39,23 @@ input[type=submit] {
   &:hover {
     cursor: pointer;
   }
+}
+
+.border-art {
+  border: solid 1px #989da341;
+}
+
+.add-new-button {
+  height: 20vmin;
+  width: 100%;
+  font-size: 5vmin;
+  line-height: 20vmin;
+  text-align: center;
+  background-color: $secondary-color;
+  color: $text-color-light;
+  &:hover {
+    background-color: #71d629;
+  }  
 }
 
 /*.alert {

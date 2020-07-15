@@ -1,4 +1,5 @@
-<section class="row px-2 pt-3 mx-3 d-flex justify-content-between">
+<div class="attn-list-section">
+  <section>
     <div>
       Total:
     </div>
@@ -7,27 +8,30 @@
     </div>
   </section>
 
-<% @attendances.each do |item| %>
-  <article class="row mx-2 py-3 m-0 border-art">
-    <div class="col-3">
-      <%= attn_group(item.group_id) %><br>
-    </div>
-    <div class="col-7 pl-2 pr-2 d-flex flex-column justify-content-between">  
-      Name:
-      <%= item.name %><br>
-      <div>
-        Created at:
-        <%= item.created_at.strftime("%Y/%m/%d") %>
+  <% @attendances.each do |item| %>
+    <article class="border-art">
+      <div class="art-image">
+        <%= attn_group(item.group_id) %>
       </div>
-    </div>
-    <div class="col-2 pl-1 text-right"> 
-      Qty:
-      <%= item.amount %>
-    </div>  
-  </article>
-<% end %>
-<div class="row blank-space">
+
+      <div class="attn-description">  
+        <div>
+          Name:
+          <%= item.name %>
+        </div>
+        
+        <div>
+          Created at:
+          <%= item.created_at.strftime("%Y/%m/%d") %>
+        </div>
+      </div>
+
+      <div> 
+        Qty:
+        <%= item.amount %>
+      </div>  
+    </article>
+  <% end %>
 </div>
-<div class="row">
-  <%= link_to 'ADD NEW ATTENDANCE', new_attendance_path, class: 'd-block col add_new_button py-4 fixed-bottom header-text text-center a-text' %>
-</div> 
+
+<%= link_to 'ADD NEW ATTENDANCE', new_attendance_path, class: 'add-new-button' %>
