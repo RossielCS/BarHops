@@ -35,3 +35,29 @@
     }
   }
 }
+
+.attn-form {
+  form {
+    & > div {
+      padding: 0 5vmin;
+      font-family: "Proxima-Nova-Regular";
+      font-size: 5vmin;
+      color: $text-color-one;
+      select {
+        padding: 1vmin 3vmin;
+        border: solid 0.5vmin #e7e7e7;
+        background-color: transparent;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        background-image: url('drop-down-arrow.png');
+        background-position: 98% center;
+        background-repeat: no-repeat;
+        background-size: 3vmin;
+        outline: none;
+        color: $text-color-three;
+      }
+    }
+  }  
+}

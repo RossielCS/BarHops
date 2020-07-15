@@ -47,14 +47,14 @@
 
 .avatar {
   object-fit: cover;
-  width: 120px;
-  height: 120px;
+  width: 40vmin;
+  height: 40vmin;
   border-radius: 50%;
 }
 
 .menu-border {
   padding-bottom: 4vmin;
-  border-bottom: solid 1px $text-color-light;
+  border-bottom: solid 0.5vmin $text-color-light;
 }
 
 #all_attn {
