@@ -18,3 +18,20 @@
   font-family: "Proxima-Nova-Regular";
   color: $text-color-light;
 }
+
+.show-group {
+  grid-row-start: 1;
+  h2 {
+    padding: 5vmin 0;
+    font-family: "Proxima-Nova-Bold";
+    font-size: 7vmin;
+    text-align: center;
+  }
+  h3 {
+    padding-bottom: 3vmin;
+    padding-left: 5vmin;
+  }
+  article {
+    padding: 3vmin 5vmin;
+  }
+}
