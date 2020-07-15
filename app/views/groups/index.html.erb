@@ -16,11 +16,11 @@
       <div class="attn-list-section">
         <% @groups.each do |g| %>
           <article class="art-group border-art">
-            <span class="art-image">
+            <span class="group-avatar art-image">
               <%= group_avatar(g) %>
             </span>
 
-            <div class="attn-description group-description">
+            <div class="attn-description">
               <div>
                 Name: <%= link_to "#{g.name}", group_path(@group, id: g.id) %>
               </div>

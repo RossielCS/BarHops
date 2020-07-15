@@ -22,9 +22,6 @@
       article {
         padding: 3vmin;
         font-size: 4vmin;
-        .art-image {
-          @include d-flex(column, center, center);
-        }
         .attn-description {
           height: 20vmin;
           @include d-flex(column, start, start);

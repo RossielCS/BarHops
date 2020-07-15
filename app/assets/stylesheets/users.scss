@@ -45,10 +45,12 @@
 }
 
 .avatar {
-  object-fit: cover;
-  width: 40vmin;
-  height: 40vmin;
-  border-radius: 50%;
+  img {
+    object-fit: cover;
+    width: 40vmin;
+    height: 40vmin;
+    border-radius: 50%;
+  }
 }
 
 .menu-border {

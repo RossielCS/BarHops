@@ -5,7 +5,10 @@
         <%= render partial: 'sessions/logout_link' %>
       </div>        
     </div>
-    <%= user_avatar(@user) %>
+    <span class="avatar">
+      <%= user_avatar(@user) %>
+    </span>
+    
     <h1><%= @user.name%></h1>
   </header>
 

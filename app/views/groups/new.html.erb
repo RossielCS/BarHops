@@ -1,26 +1,21 @@
-<div class="container-fluid p-0">
-  <div class="container m-auto header-text title bg-header">
+<div class="container">
+  <div class="container-reg-log">
     <header class="header header-bg">
-      <div class="row justify-content-center header-text align-items-center">
-        <div class="col-2 p-0">
-          <%= link_to image_tag("arrow_left.png"), user_path(current_user.id)%>
-        </div>
-        <div class="col-7">
-          <h1 class="m-0 title">NEW GROUP</h1>
-        </div>
-        <input type="submit" value="Save" form="new_group_form" class="col-3">
+      <%= link_to image_tag("arrow_left.png"), user_path(current_user.id) %>
+      
+      <div>
+        <h1 class=>NEW GROUP</h1>
       </div>
-    </header>
-  </div>
 
-  <section class="container">
-    <div class="row">
-      <div class="col-12 p-0">
-        <%= form_for(@group, html: {id: 'new_group_form'}) do |form| %>
-          <%= form.text_field :name, placeholder: 'Group\'s Name' %><br>
-          <%= form.file_field :group_avatar %><br><br>
-        <% end %>
-      </div>
-    </div>      
-  </section>
+      <input type="submit" value="Save" form="new_group_form">
+    </header>
+  
+
+    <section class="login-form">
+      <%= form_for(@group, html: {id: 'new_group_form'}) do |form| %>
+        <%= form.text_field :name, placeholder: 'Group\'s Name' %><br>
+        <%= form.file_field :group_avatar %><br><br>
+      <% end %>     
+    </section>
+  </div>
 </div>
