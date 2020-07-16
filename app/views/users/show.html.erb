@@ -12,25 +12,25 @@
     <h1><%= @user.name%></h1>
   </header>
 
-  <section class="">
-    <ul class="">
+  <section>
+    <ul>
       <li id="all_attn">
         <div class="menu-border">
-          <%= link_to 'All my Attendances', attendances_path, class: '' %><br> 
+          <%= link_to 'All my Attendances', attendances_path %><br> 
         </div> 
       </li>         
       <li id="all_ext_attn">
         <div class="menu-border">
-          <%= link_to 'All my External Attendances', external_attendances_path, class: '' %><br>
+          <%= link_to 'All my External Attendances', external_attendances_path %><br>
         </div>
       </li>
       <li id="all_groups">
         <div class="menu-border">
-          <%= link_to 'All Groups', groups_path, class: '' %>
+          <%= link_to 'All Groups', groups_path %>
         </div>  
       </li>
       <li id="all_users">
-        <%= link_to 'Bar Hopping Users', users_path, class: '' %>
+        <%= link_to 'Bar Hopping Users', users_path %>
       </li>  
     </ul>      
   </section> 

@@ -10,12 +10,12 @@
     color: $text-color-light;
   } 
   header {
-    @include d-flex(column, start, center);
+    @include d-flex(column, flex-start, center);
     color: $text-color-light;
     div {
       width: 100vmin;
       height: 10vmax;
-      @include d-flex(row, end, center);
+      @include d-flex(row, flex-end, center);
       div {
         padding-right: 5vmin;        
         a {

@@ -27,8 +27,9 @@
                 <strong>Name:</strong>
                 <%= user.name %>
               </div>
-              <ol>
-                <strong>Groups in common:</strong><br>
+              
+              <strong>Groups in common:</strong>
+              <ol>                
                 <% Group.attn_groups_by_user(Attendance.current_user_groups_id(user.author_id)).each do |g| %>
                   <li>
                     <%= g.name %>

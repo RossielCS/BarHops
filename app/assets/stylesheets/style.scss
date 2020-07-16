@@ -40,6 +40,8 @@ input[type=submit] {
 }
 
 .add-new-button {
+  position: fixed;
+  bottom: 0;
   height: 20vmin;
   width: 100%;
   font-size: 5vmin;
@@ -60,71 +62,21 @@ input[type=submit] {
   background-image: linear-gradient(#143560, #3084c2);
 }
 
-/*.alert {
+.alert {
   width: 100%;
-}
-
-.header-text {
-  color: $text-color-light;  
-}
-
-.bg-header {
-  background-image: linear-gradient($primary-color, $primary-color-dark);
-}
-
-.title {  
-  height: 10vh;
-  line-height: 10vh;
-  font-size: 22px;
-  font-family: "Proxima-Nova-Regular";  
-}
-
-input[type=submit] {
-  font-size: 15px;
-  border: none;
-  background-color: transparent;
-  color: $text-color-light;
-  &:focus {
-    outline: none;
-  }
-}
-
-input[type=text] {
-  @include input();
-  &:focus {
-    outline: solid 1px #d3d3d3;
-  }
-}
-
-input[type=file] {
-  @include input();  
-}
-
-article {
-  font-size: 14px;
-}
-
-.border-art {
-  border: solid 1px #989da341;
-}
-
-.a-text:hover {
-  text-decoration: none;
-  color: $text-color-light;
-}
-
-.blank-space {
-  height: 20vh;
-  width: 100vw;
-}
-
-.add_new_button {
-  background-color: $secondary-color;
-  height: 10%;
-  width: 100%;
+  height: 8vh;  
+  font-size: 5vmin;
   font-family: "Proxima-Nova-Regular";
-  font-size: 17px;
-  &:hover {
-    background-color: #71d629;
-  }  
-}*/
+  line-height: 8vh;
+  text-align: center;
+}
+
+.alert-success {
+  color: #408311;
+  background-color: #7ed44042;
+}
+
+.alert-danger {
+  color: #8d1313;
+  background-color: #d6484844;
+}
