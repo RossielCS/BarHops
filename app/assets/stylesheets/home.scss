@@ -2,17 +2,18 @@
 @import "mixins";
 
 .logo-container {
-  grid-row: 2/3;
+  grid-row: 1/3;
+  margin-top: 5vmax;
   padding-bottom: 5vmin;
-  @include d-flex(row, center, flex-start);
-  img {    
-    max-width: 80vmin;
+  @include d-flex(row, center, center);
+  img {
+    width: 60%;
   }
 }
 
 .login-signup {
   grid-row: 3/4;
-  margin: 5vmax 0;
+  margin-bottom: 5vmax;
   padding: 0 5vmin;
   @include d-flex(column, end, center);
   font-family: "Proxima-Nova-Regular";

@@ -5,11 +5,13 @@
   grid-row-start: 1;  
   font-family: "Proxima-Nova-Regular";
   .attn-render {
-    height: 90vmax;
+    
     @include d-flex(column, space-between, center);
     .attn-list-section {
       width: 100%;
-      padding: 0 5vmin;
+      padding-left: 5vmin;
+      padding-right: 5vmin;
+      padding-bottom: 21vmin;
       section {
         height: 12vmin;
         padding: 0 3vmin;
