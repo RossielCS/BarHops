@@ -1,17 +1,26 @@
-@mixin input {
+@mixin d-flex($direction, $justify, $align){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin input(){
   width: 100%;
-  padding: 12px 20px;
+  padding: 3vmin 5vmin;
+  margin-top: 5vmin;
   background-color: $text-color-light;
   border-style: solid;
-  border-width: 1px;
-  border-radius: 2px;
+  border-width: 0.5vmin;
   border-color: #e7e7e7;
+  font-size: 5vmin;
+  color: $text-color-three;
 }
 
 @mixin link(){
-  font-size: 18px;
-  line-height: 60px;
+  font-size: 5vmin;
+  line-height: 8vmin;
   background-repeat: no-repeat;
   background-position: 0 .7em;
-  padding-left: 2.7em;
+  padding-left: 13vmin;
 }

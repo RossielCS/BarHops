@@ -4,26 +4,58 @@
 @import "variables";
 @import "mixins";
 
-.profile-bg {
-  height: 100vh;
-  background-image: linear-gradient(#143560, #3084c2);
+.profile {
+  height: 100vh;  
+  a {
+    color: $text-color-light;
+  } 
+  header {
+    @include d-flex(column, flex-start, center);
+    color: $text-color-light;
+    div {
+      width: 100vmin;
+      height: 10vmax;
+      @include d-flex(row, flex-end, center);
+      div {
+        padding-right: 5vmin;        
+        a {
+          font-size: 5vmin;
+          font-family: "Proxima-Nova-Regular";          
+        }
+      }
+    }
+    h1 {
+      margin-top: 3vmin;
+      font-size: 8vmin;
+      font-family: "Proxima-Nova-Bold";
+    }    
+  }
+  section {
+    grid-row: 2/3;
+    @include d-flex(column, center, center);
+    ul {
+      list-style-type: none;
+      font-size: 5vmin;
+      font-family: "Proxima-Nova-Regular";
+      li {
+        padding-top: 4vmin;
+      }
+    }
+  }
 }
 
 .avatar {
-  object-fit: cover;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  img {
+    object-fit: cover;
+    width: 40vmin;
+    height: 40vmin;
+    border-radius: 50%;
+  }
 }
 
 .menu-border {
-  border-bottom: solid 1px $text-color-light;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  padding-bottom: 4vmin;
+  border-bottom: solid 0.5vmin $text-color-light;
 }
 
 #all_attn {

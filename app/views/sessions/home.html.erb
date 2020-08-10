@@ -1,13 +1,11 @@
-<div class="container-fluid p-0">
-  <div class="container m-auto">    
-    <div class="logo-container">
-      <%= image_tag 'logo.png' %>
-    </div>
-    
-    <section class="mb-3 mx-3">      
-      <%= link_to 'LOG IN', login_path, class: 'd-block text-center py-3 login a-text' %>
-    
-      <%= link_to 'SIGN UP', signup_path, class: 'd-block text-center py-3 signup' %> 
-    </section>       
-  </div>  
+<div class="container">    
+  <div class="logo-container">
+    <%= image_tag 'logo.png' %>
+  </div>
+  
+  <section class="login-signup">      
+    <%= link_to 'LOG IN', login_path, class: 'login' %>
+  
+    <%= link_to 'SIGN UP', signup_path, class: 'signup' %> 
+  </section>       
 </div>

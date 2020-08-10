@@ -1,40 +1,45 @@
-<div class="container-fluid p-0">
-  <div class="container m-auto header-text title profile-bg overflow-auto">
-    <header class="text-center mb-3">
-      <div class="row justify-content-center header-text align-items-center">
-        <div class="col-2 p-0">
-          <%= link_to image_tag("arrow_left.png"), user_path(current_user.id)%>
-        </div>
-        <div class="col-7">
+<div class="container profile-bg">
+  <div class="attn-container">
+    <div>
+      <header class="header">
+        <%= link_to image_tag("arrow_left.png"), user_path(current_user.id)%>
+        
+        <div>
           <h1 class="m-0 title">USERS</h1>
         </div>
-        <div class="col-3">
-          <%= render partial: 'sessions/logout_link'%>
-        </div>
-      </div>
-    </header>
-    <section>
-      <% Attendance.friends_name(current_user, @users).each do |user| %>
-        <article class="row p-2 m-0 border-art">
-          <div class="col-5 p-0">
-            <%= user_avatar(user.author_id) %>
-          </div>
-          <div class="col-7 pl-1 pr-0 d-flex flex-column justify-content-between">
-            <p>
-              <strong>Name: </strong> 
-              <%= user.name %>
-            </p>
-            <ol class="p-0 m-0">
-              <strong>Groups in common:</strong> <br>
-              <div class="pl-4">
-                <% Group.attn_groups_by_user(Attendance.current_user_groups_id(user.author_id)).each do |g| %>
-                  <li class=""> <%= g.name %> </li>
-                <% end %>
+        
+        <%= render partial: 'sessions/logout_link'%>      
+      </header>
+    </div>
+
+    <section class="attn-render">
+      <div class="attn-list-section">
+        <% Attendance.friends_name(current_user, @users).each do |user| %>
+          <article class="art-group border-art">
+            <div>
+              <span class="group-avatar">
+                <%= user_avatar(user.author_id) %>
+              </span>
+            </div>
+
+            <div class="attn-description">
+              <div>
+                <strong>Name:</strong>
+                <%= user.name %>
               </div>
-            </ol>
-          </div>  
-        </article>
-      <% end %>
+              
+              <strong>Groups in common:</strong>
+              <ol>                
+                <% Group.attn_groups_by_user(Attendance.current_user_groups_id(user.author_id)).each do |g| %>
+                  <li>
+                    <%= g.name %>
+                  </li>
+                <% end %>
+              </ol>
+            </div>
+          </article>
+        <% end %>
+      </div>
     </section>     
   </div>
 </div>

@@ -1,21 +1,19 @@
-<div class="container-fluid p-0 overflow-auto">
-  <div class="container m-auto header-text title bg-header">
-    <header class="text-center">
-      <div class="row justify-content-center header-text align-items-center">
-        <div class="col-2 p-0">
-          <%= link_to image_tag("arrow_left.png"), user_path(current_user.id)%>
-        </div>
-        <div class="col-7">
-          <h1 class="m-0 title">EXTERNAL ATTN</h1>
-        </div>
-        <div class="col-3">
-          <%= render partial: 'sessions/logout_link'%>
-        </div>
+<div class="container">
+  <div class="attn-container">
+    <div>
+    <header class="header header-bg">
+      <%= link_to image_tag("arrow_left.png"), user_path(current_user.id)%>
+      
+      <div class="col-7">
+        <h1 class="m-0 title">EXTERNAL ATTN</h1>
       </div>
+
+      
+      <%= render partial: 'sessions/logout_link'%>
     </header>
   </div>
 
-  <section class="container p-0">
+  <section class="attn-render">
     <%= render 'attendances' %>          
   </section>
 </div>
