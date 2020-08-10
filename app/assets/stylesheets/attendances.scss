@@ -1,3 +1,78 @@
-// Place all the styles related to the attendances controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+@import "mixins";
+
+.attn-container {
+  grid-row-start: 1;  
+  font-family: "Proxima-Nova-Regular";
+  .attn-render {
+    
+    @include d-flex(column, space-between, center);
+    .attn-list-section {
+      width: 100%;
+      padding-left: 5vmin;
+      padding-right: 5vmin;
+      padding-bottom: 21vmin;
+      section {
+        height: 12vmin;
+        padding: 0 3vmin;
+        font-size: 5vmin;
+        @include d-flex(row, space-between, center);
+      }
+      .art-attn {
+        @include d-flex(row, space-between, start);
+      }
+      article {
+        padding: 3vmin;
+        font-size: 4vmin;
+        .attn-description {
+          height: 20vmin;
+          @include d-flex(column, start, start);
+          & > div {
+            margin-bottom: 4vmin;
+          }
+          ol {
+            list-style: decimal;
+            padding-left: 7vmin;
+          }
+        }
+      }
+      .art-group {
+        @include d-flex(row, start, start);
+        color: $text-color-light;
+        .attn-description {
+          padding-left: 3vmin;
+          a {
+            font-family: "Proxima-Nova-Bold";
+            color: $text-color-light;
+          }
+        }
+      }
+    }
+  }
+}
+
+.attn-form {
+  form {
+    & > div {
+      padding: 0 5vmin;
+      font-family: "Proxima-Nova-Regular";
+      font-size: 5vmin;
+      color: $text-color-one;
+      select {
+        padding: 1vmin 3vmin;
+        border: solid 0.5vmin #e7e7e7;
+        background-color: transparent;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        background-image: url('drop-down-arrow.png');
+        background-position: 98% center;
+        background-repeat: no-repeat;
+        background-size: 3vmin;
+        outline: none;
+        color: $text-color-three;
+      }
+    }
+  }  
+}

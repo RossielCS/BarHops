@@ -1,25 +1,19 @@
-<div class="container-fluid p-0">
-  <header class="title bg-header">
-    <div class="container text-center m-auto">
-      <div class="row justify-content-center header-text align-items-center px-3">
-        <%= link_to image_tag("arrow_left.png"), root_path, class: 'd-block col-1 px-2' %>
+<div class="container">
+  <div>
+    <header class="header header-bg">
+      <%= link_to image_tag("arrow_left.png"), root_path %>
 
-        <div class="col-9">
-          <h1 class="m-0 title">LOGIN</h1>
-        </div>
-        
-        <input type="submit" value="Log In" form="login" class="col-2 px-2 text-nowrap">
+      <div>
+        <h1>LOGIN</h1>
       </div>
-    </div>
-  </header>
-
-  <section class="container mt-3">
-    <div class="row justify-content-center">
-      <div class="col-12 p-0">
-        <%= form_for(:session, url: login_path, html: {id: "login"}) do |f| %>                 
-          <%= f.text_field :name, placeholder: 'Name' %><br><br>         
-        <% end %>        
-      </div>
-    </div>
-  </section> 
+      
+      <input type="submit" value="Log In" form="login">      
+    </header>
+  
+    <section class="login-form">
+      <%= form_for(:session, url: login_path, html: {id: "login"}) do |f| %>                 
+        <%= f.text_field :name, placeholder: 'Name' %><br><br>         
+      <% end %>
+    </section>
+  </div>  
 </div>

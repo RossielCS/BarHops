@@ -1,23 +1,37 @@
 @import "variables";
+@import "mixins";
 
 .logo-container {
-  padding-top: 50%;
-  padding-bottom: 20%;
+  grid-row: 1/3;
+  margin-top: 5vmax;
+  padding-bottom: 5vmin;
+  @include d-flex(row, center, center);
   img {
-    object-fit: cover;
-    max-width: 100%;
+    width: 60%;
   }
 }
 
-.signup {
-  color: $text-color-dark;
+.login-signup {
+  grid-row: 3/4;
+  margin-bottom: 5vmax;
+  padding: 0 5vmin;
+  @include d-flex(column, end, center);
   font-family: "Proxima-Nova-Regular";
-  &:active {
-    color: $text-color-light;
-    background-color: $text-color-three;
+  font-size: 5vmin;
+  a {
+    height: 7vmax;
+    width: 100%;
+    line-height: 7vmax;
+    text-align: center;
   }
-  &:hover {
+  .login {
+    color: $text-color-light;
+    background-color: $primary-color;
+    &:hover {
+      background-color: $primary-color-dark;
+    }
+  }
+  .signup {
     color: $text-color-dark;
-    text-decoration: none;
   }
 }
