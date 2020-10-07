@@ -38,7 +38,7 @@ Here is the user journey for the app:
 
 ## Live Demo
 
-You can try it [here](https://frozen-shelf-35515.herokuapp.com/).
+You can try it [here](https://rossielcs-barhops.herokuapp.com/).
 
 ## :hammer:  Built With
 - Ruby 2.7,
