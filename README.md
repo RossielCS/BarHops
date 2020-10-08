@@ -1,6 +1,6 @@
 # Rails' Capstone Project
 
-> In this project I build a web app called 'BarHops' where the user can count how many times has visited a certain bar and then group them by categories or 'groups'.
+> In this project I built a web app called 'BarHops' where the user can count how many times has visited a certain bar and then group them by categories or 'groups'.
 Also, I followed the given design which is [Snapscan](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) and I changed the content.
 
 The main objective was to build an MVP (Minimum Viable Product) version of the app following business requirements.
@@ -48,6 +48,7 @@ You can try it [here](https://rossielcs-barhops.herokuapp.com/).
 - Capybara 2.15,
 - Shoulda-matchers 4.0,
 - Webdrivers 4.0,
+- Amazon S3 (Amazon Simple Storage Service),
 - Rubocop 0.79.0
 
 ## :computer: Getting Started
@@ -109,10 +110,11 @@ After pushing the last changes to the remote repository, follow this steps:
 ## :gem:  Features
 * Users can create an account.
 * Users can upload a profile picture.
-* Validates user name.
+* It validates user name.
 * To login is necessary to submit the name.
 * The user can create attendances and groups.
-* When creating a group can add name and a picture.
+* When creating a group, the user can add a name and a picture.
+* It uses Amazon S3 in production.
 
 ## :woman:  Author
 
