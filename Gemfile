@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-gem 'image_processing', '~> 0.2.3'
+gem 'image_processing', '~> 1.12.2'
 
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 
